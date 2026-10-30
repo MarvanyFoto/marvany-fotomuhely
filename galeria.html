@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galéria | Márvány Fotóműhely</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navigáció -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="bg-amber-500 text-slate-900 p-2 rounded-lg font-bold text-xl">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider uppercase block">Márvány Fotóműhely</span>
+                    <span class="text-xs text-slate-400">Békéscsaba • 1997 óta</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-400 transition">Főoldal</a>
+                <a href="galeria.html" class="text-amber-400 font-semibold">Galéria</a>
+                <a href="index.html#palyazatok" class="hover:text-amber-400 transition">Pályázatok</a>
+                <a href="index.html#kapcsolat" class="hover:text-amber-400 transition">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Galéria Szekció -->
+    <main class="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow w-full">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 border border-amber-500/20 bg-amber-500/10 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest">
+                Portfólió
+            </span>
+            <h1 class="text-4xl font-extrabold mt-4 mb-2">Tagjaink Alkotásai</h1>
+            <p class="text-slate-400">Válogatás a Márvány Fotóműhely tagjainak legújabb képeiből</p>
+        </div>
+
+        <!-- Szűrőgombok -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button onclick="filterGallery('all')" class="filter-btn active bg-amber-500 text-slate-950 px-4 py-2 rounded-lg font-medium text-sm transition">Összes</button>
+            <button onclick="filterGallery('termeszet')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition">Természet</button>
+            <button onclick="filterGallery('portre')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition">Portré</button>
+            <button onclick="filterGallery('muveszi')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg font-medium text-sm transition">Művészi</button>
+        </div>
+
+        <!-- Képrács (Masonry style grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+            
+            <!-- Fotó kártya 1 -->
+            <div class="gallery-item termeszet group relative overflow-hidden rounded-xl bg-slate-800 border border-slate-700 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80', 'Tavi tükröződés', 'Fotó: Klubtag')">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Természet" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                    <div>
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Természet</span>
+                        <h3 class="text-lg font-bold">Tavi tükröződés</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fotó kártya 2 -->
+            <div class="gallery-item portre group relative overflow-hidden rounded-xl bg-slate-800 border border-slate-700 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80', 'Fény és árnyék', 'Fotó: Klubtag')">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Portré" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                    <div>
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Portré</span>
+                        <h3 class="text-lg font-bold">Fény és árnyék</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fotó kártya 3 -->
+            <div class="gallery-item muveszi group relative overflow-hidden rounded-xl bg-slate-800 border border-slate-700 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80', 'A magányos fotós', 'Fotó: Klubtag')">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=600&q=80" alt="Művészi" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                    <div>
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Művészi</span>
+                        <h3 class="text-lg font-bold">A magányos fotós</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal (Nagyított képmegjelenítő) -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-2xl hover:text-amber-400"><i class="fa-solid fa-xmark"></i></button>
+            <img id="lightbox-img" src="" class="max-h-[75vh] w-auto rounded-lg object-contain border border-slate-800">
+            <div class="text-center mt-4">
+                <h3 id="lightbox-title" class="text-xl font-bold"></h3>
+                <p id="lightbox-sub" class="text-sm text-slate-400"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-6 bg-slate-950 border-t border-slate-800 text-center text-sm text-slate-500">
+        <p>&copy; 1997–2026 Márvány Fotóműhely, Békéscsaba.</p>
+    </footer>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function openLightbox(src, title, subtitle) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-sub').innerText = subtitle;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
