@@ -10,50 +10,50 @@
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
-    <!-- Navigáció -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <!-- Eredeti logó beillesztve -->
-                <div class="bg-slate-800 p-1.5 rounded-lg border border-slate-700 flex items-center justify-center w-12 h-12 overflow-hidden">
-                    <img src="https://www.marvanyfoto.hu/images/logo.png" alt="Márvány Fotóműhely Logó" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <span class="text-xl font-bold tracking-wider uppercase block">Márvány Fotóműhely</span>
-                    <span class="text-xs text-slate-400">Békéscsaba • 1997 óta</span>
-                </div>
+<!-- Navigáció -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <!-- Jól látható, világos háttér a logónak -->
+            <div class="bg-white p-1.5 rounded-lg shadow-md flex items-center justify-center w-12 h-12 overflow-hidden">
+                <img src="https://www.marvanyfoto.hu/images/logo.png" alt="Márvány Fotóműhely Logó" class="w-full h-full object-contain">
             </div>
-            
-            <!-- Asztali Menü -->
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#rolunk" class="hover:text-amber-400 transition">Rólunk</a>
-                <a href="#galeria" class="hover:text-amber-400 transition">Galéria</a>
-                <a href="#palyazatok" class="hover:text-amber-400 transition">Pályázatok</a>
-                <a href="#kapcsolat" class="hover:text-amber-400 transition">Kapcsolat</a>
-            </nav>
-
-            <div class="hidden sm:flex items-center space-x-4">
-                <a href="#kapcsolat" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition">
-                    Csatlakozás
-                </a>
-            </div>
-
-            <!-- Mobil menü gomb -->
-            <div class="md:hidden flex items-center">
-                <button id="menu-btn" class="text-slate-300 hover:text-amber-400 focus:outline-none text-2xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+            <div>
+                <span class="text-xl font-bold tracking-wider uppercase block">Márvány Fotóműhely</span>
+                <span class="text-xs text-slate-400">Békéscsaba • 1997 óta</span>
             </div>
         </div>
+        
+        <!-- Asztali Menü -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#rolunk" class="hover:text-amber-400 transition">Rólunk</a>
+            <a href="#galeria" class="hover:text-amber-400 transition">Galéria</a>
+            <a href="#palyazatok" class="hover:text-amber-400 transition">Pályázatok</a>
+            <a href="#kapcsolat" class="hover:text-amber-400 transition">Kapcsolat</a>
+        </nav>
 
-        <!-- Mobil lenyíló menü -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-3">
-            <a href="#rolunk" class="block text-slate-300 hover:text-amber-400 transition py-1">Rólunk</a>
-            <a href="#galeria" class="block text-slate-300 hover:text-amber-400 transition py-1">Galéria</a>
-            <a href="#palyazatok" class="block text-slate-300 hover:text-amber-400 transition py-1">Pályázatok</a>
-            <a href="#kapcsolat" class="block text-slate-300 hover:text-amber-400 transition py-1">Kapcsolat</a>
+        <div class="hidden sm:flex items-center space-x-4">
+            <a href="#kapcsolat" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition">
+                Csatlakozás
+            </a>
         </div>
-    </header>
+
+        <!-- Mobil menü gomb -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-slate-300 hover:text-amber-400 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobil lenyíló menü -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-3">
+        <a href="#rolunk" class="block text-slate-300 hover:text-amber-400 transition py-1">Rólunk</a>
+        <a href="#galeria" class="block text-slate-300 hover:text-amber-400 transition py-1">Galéria</a>
+        <a href="#palyazatok" class="block text-slate-300 hover:text-amber-400 transition py-1">Pályázatok</a>
+        <a href="#kapcsolat" class="block text-slate-300 hover:text-amber-400 transition py-1">Kapcsolat</a>
+    </div>
+</header>
 
     <!-- Hero Szekció -->
     <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
