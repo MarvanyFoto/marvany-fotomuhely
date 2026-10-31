@@ -14,25 +14,44 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="bg-amber-500 text-slate-900 p-2 rounded-lg font-bold text-xl">
-                    <i class="fa-solid fa-camera-retro"></i>
+                <!-- Eredeti logó beillesztve -->
+                <div class="bg-slate-800 p-1.5 rounded-lg border border-slate-700 flex items-center justify-center w-12 h-12 overflow-hidden">
+                    <img src="https://www.marvanyfoto.hu/images/logo.png" alt="Márvány Fotóműhely Logó" class="w-full h-full object-contain">
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-wider uppercase block">Márvány Fotóműhely Egyesület</span>
+                    <span class="text-xl font-bold tracking-wider uppercase block">Márvány Fotóműhely</span>
                     <span class="text-xs text-slate-400">Békéscsaba • 1997 óta</span>
                 </div>
             </div>
+            
+            <!-- Asztali Menü -->
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
-    <a href="index.html" class="hover:text-amber-400 transition">Főoldal</a>
-    <a href="galeria.html" class="hover:text-amber-400 transition">Galéria</a> <!-- Itt a módosítás! -->
-    <a href="#palyazatok" class="hover:text-amber-400 transition">Pályázatok & Események</a>
-    <a href="#kapcsolat" class="hover:text-amber-400 transition">Kapcsolat</a>
+                <a href="#rolunk" class="hover:text-amber-400 transition">Rólunk</a>
+                <a href="#galeria" class="hover:text-amber-400 transition">Galéria</a>
+                <a href="#palyazatok" class="hover:text-amber-400 transition">Pályázatok</a>
+                <a href="#kapcsolat" class="hover:text-amber-400 transition">Kapcsolat</a>
             </nav>
-            <div>
-                <a href="#kapcsolat" class="hidden sm:inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition">
-                    Klubéletbe csatlakozás
+
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#kapcsolat" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition">
+                    Csatlakozás
                 </a>
             </div>
+
+            <!-- Mobil menü gomb -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="text-slate-300 hover:text-amber-400 focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil lenyíló menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-3">
+            <a href="#rolunk" class="block text-slate-300 hover:text-amber-400 transition py-1">Rólunk</a>
+            <a href="#galeria" class="block text-slate-300 hover:text-amber-400 transition py-1">Galéria</a>
+            <a href="#palyazatok" class="block text-slate-300 hover:text-amber-400 transition py-1">Pályázatok</a>
+            <a href="#kapcsolat" class="block text-slate-300 hover:text-amber-400 transition py-1">Kapcsolat</a>
         </div>
     </header>
 
@@ -132,60 +151,60 @@
         </div>
     </section>
 
-<!-- Pályázatok & Események -->
-<section id="palyazatok" class="py-20 bg-slate-900 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-amber-400 border border-amber-500/20 bg-amber-500/10 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest">
-                Eseményeink
-            </span>
-            <h2 class="text-3xl font-bold mt-4 mb-2">Pályázatok & Fesztiválok</h2>
-            <p class="text-slate-400">A Márvány Fotóműhely Egyesület által szervezett tradicionális rendezvények</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Pályázat 1 -->
-            <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs px-2.5 py-1 rounded-md font-semibold">Fotópályázat</span>
-                        <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Évente megrendezve</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-100">„Csak tiszta forrásból…”</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Hagyományos fotópályázatunk, amelyre az ország egész területéről és határon túlról is várjuk a fotóművészek és amatőr fotósok pályaműveit.
-                    </p>
-                </div>
-                <div class="pt-4 border-t border-slate-700/50 flex justify-between items-center">
-                    <span class="text-xs text-slate-400">Kiírás és eredmények</span>
-                    <a href="#" class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">
-                        Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
-                </div>
+    <!-- Pályázatok & Események -->
+    <section id="palyazatok" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-400 border border-amber-500/20 bg-amber-500/10 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest">
+                    Eseményeink
+                </span>
+                <h2 class="text-3xl font-bold mt-4 mb-2">Pályázatok & Fesztiválok</h2>
+                <p class="text-slate-400">A Márvány Fotóműhely Egyesület által szervezett tradicionális rendezvények</p>
             </div>
 
-            <!-- Pályázat 2 -->
-            <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs px-2.5 py-1 rounded-md font-semibold">Fesztivál</span>
-                        <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Békéscsaba</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pályázat 1 -->
+                <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs px-2.5 py-1 rounded-md font-semibold">Fotópályázat</span>
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Évente megrendezve</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100">„Csak tiszta forrásból…”</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Hagyományos fotópályázatunk, amelyre az ország egész területéről és határon túlról is várjuk a fotóművészek és amatőr fotósok pályaműveit.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-slate-100">Békéscsabai Digiporáma Fesztivál</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        A képek és a zene összhangjára épülő audiovizuális műfaj, a digiporáma szerelmeseinek országos találkozója és versenyvizsgája.
-                    </p>
+                    <div class="pt-4 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Kiírás és eredmények</span>
+                        <a href="#" class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">
+                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="pt-4 border-t border-slate-700/50 flex justify-between items-center">
-                    <span class="text-xs text-slate-400">Jegyzőkönyvek & Archívum</span>
-                    <a href="#" class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">
-                        Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                <!-- Pályázat 2 -->
+                <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs px-2.5 py-1 rounded-md font-semibold">Fesztivál</span>
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> Békéscsaba</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100">Békéscsabai Digiporáma Fesztivál</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            A képek és a zene összhangjára épülő audiovizuális műfaj, a digiporáma szerelmeseinek országos találkozója és versenyvizsgája.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Jegyzőkönyvek & Archívum</span>
+                        <a href="#" class="text-amber-400 hover:text-amber-300 text-sm font-semibold flex items-center gap-1">
+                            Részletek <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Kapcsolat & Helyszín -->
     <section id="kapcsolat" class="py-20 bg-slate-900 border-t border-slate-800">
@@ -194,30 +213,3 @@
                 <h2 class="text-3xl font-bold mb-4">Kapcsolat & Klubnapok</h2>
                 <p class="text-slate-400">Szeretettel várunk minden fotózás iránt érdeklődőt!</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                    <div class="text-amber-400 text-3xl mb-4"><i class="fa-solid fa-location-dot"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Helyszín</h3>
-                    <p class="text-slate-300 text-sm">Békés Megyei Könyvtár<br>5600 Békéscsaba</p>
-                </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                    <div class="text-amber-400 text-3xl mb-4"><i class="fa-solid fa-clock"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Időpont</h3>
-                    <p class="text-slate-300 text-sm">Minden héten kedden<br>18:00 órától</p>
-                </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                    <div class="text-amber-400 text-3xl mb-4"><i class="fa-solid fa-envelope"></i></div>
-                    <h3 class="font-bold text-lg mb-2">Információ</h3>
-                    <p class="text-slate-300 text-sm">Érdeklődni a klubvezetőknél vagy a könyvtárban személyesen.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lábléc -->
-    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-sm text-slate-500">
-        <p>&copy; 1997–2026 Márvány Fotóműhely, Békéscsaba. Minden jog fenntartva.</p>
-    </footer>
-
-</body>
-</html>
